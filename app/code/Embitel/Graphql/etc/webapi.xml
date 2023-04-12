@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="app/code/Magento/Webapi/etc/webapi.xsd">
+    <route url="/V1/graphqlapi/name" method="GET">
+        <service class="Embitel\Graphql\Api\CustomInterface" method="getData" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/post/class" method="POST">
+        <service class="Embitel\Graphql\Api\CustomInterface" method="createCustomergroup" />
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>
+
+

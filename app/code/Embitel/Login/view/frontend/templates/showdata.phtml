@@ -1,0 +1,70 @@
+<?php
+	$collection = $block->getCollection();
+if ($collection->count()) {
+?>
+<div class="table-wrapper orders-history">
+    <table class="data table table-order-items history" id="my-orders-table">
+        <thead>
+        <tr>
+            <th><?php echo __('Employee ID') ?></th>
+            <th><?php echo __('First Name') ?></th>
+            <th><?php echo __('Last Name') ?></th>
+            <th><?php echo __('Mobile Number') ?></th>
+            <th><?php echo __('Email') ?></th>
+           
+            <th><?php echo __('Company Name') ?></th>
+            <th><?php echo __('Department') ?></th>
+            <th><?php echo __('Occupation') ?></th>
+            <th><?php echo __('Address') ?></th>
+            <th><?php echo __('Joining Date') ?></th>
+            <th><?php echo __('Date of Birth') ?></th>
+           
+
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+				foreach ($collection as $item): ?>
+        <tr>
+            <td>
+                <?php echo $item->getemp_id() ?>
+            </td>
+            <td>
+                <?php echo $item->getfirst_name() ?>
+            </td>
+            <td>
+                <?php echo $item->getlast_name() ?>
+            </td>
+            <td>
+                <?php echo $item->getemail() ?>
+            </td>
+           <td>
+            <?php echo $item->getmobile_number() ?>
+           </td>
+           <td>
+            <?php echo $item->getcompany_name() ?>
+           </td>
+           <td>
+            <?php echo $item->getdepartment() ?>
+           </td>
+           <td>
+            <?php echo $item->getoccupation() ?>
+           </td>
+           <td>
+            <?php echo $item->getaddress() ?>
+           </td>
+           <td>
+            <?php echo $item->getjoining_date() ?>
+           </td>
+           <td>
+            <?php echo $item->getdate_of_birth() ?>
+           </td>
+            
+        </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+<?php
+	}
+	?>

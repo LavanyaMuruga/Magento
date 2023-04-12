@@ -1,0 +1,212 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+    </head>
+    <body>
+    <h1 class="page-title">
+        <span class="base" data-ui-id="page-title-wrapper">Employee Registration Form</span>    
+    </h1>
+   
+<div class="row">
+    <div class="col-md-8">
+        <form name="addData" method="post" id="addData" class="form"
+              action="<?php echo $block->getBaseURl().'login/index/save'; ?>"
+              data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+              data-mage-init='{"validation":{}}'>
+            <fieldset class="fieldset">
+                <fieldset class="fieldset row">
+                    <div class="fields col-md-6">
+                       
+                       <!-- Employee ID -->
+                       <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->
+                                escapeHtmlAttr(__('Emp ID')) ?></span></label>
+                            <div class="control">
+                                <input name="emp_id" 
+                                id="emp_id" 
+                                title="EmpID" 
+                                value="" 
+                                class="input-text" 
+                                type="text"
+                                data-validate="{required:true}">
+                            </div>
+                        </div>
+
+                        <!-- First Name -->
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->
+                                escapeHtmlAttr(__('First Name')) ?></span></label>
+                            <div class="control">
+                                <input  name="first_name" 
+                                        id="first_name" 
+                                        title="First Name" 
+                                        value="" 
+                                        class="input-text" 
+                                        type="text"
+                                        data-validate="{required:true, 'validate-alphanum-with-spaces':true}">
+                            </div>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->
+                                escapeHtmlAttr(__('Last Name')) ?></span></label>
+                            <div class="control">
+                                <input  name="last_name" 
+                                        id="last_name" 
+                                        title="Last Name" 
+                                        value="" 
+                                        class="input-text" 
+                                        type="text"
+                                        data-validate="{required:true, 'validate-alphanum-with-spaces':true}">
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->
+                                escapeHtmlAttr(__('Email')) ?></span></label>
+                            <div class="control">
+                                <input  name="email" 
+                                        id="email" 
+                                        title="Email" 
+                                        value="" 
+                                        class="input-text" 
+                                        type="text"
+                                        data-validate="{required:true, 'validate-email':true}">
+                            </div>
+                        </div>
+
+                        <!-- Mobile NUmber -->
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->
+                                escapeHtmlAttr(__('Mobile Number')) ?></span></label>
+                            <div class="control">
+                                <input  type="number"
+                                        name="mobile_number" 
+                                        id="mobile_number" 
+                                        title="Mobile Number"
+                                        class="input-text"
+                                        data-validate="{required:true, 'validate-alphanum-with-spaces':true}">
+                            </div>
+                        </div>
+
+                        <!-- Company Name -->
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->
+                                escapeHtmlAttr(__('Company Name')) ?></span></label>
+                            <div class="control">
+                                <input  name="company_name" 
+                                        id="company_name" 
+                                        title="Company Name" 
+                                        value="" 
+                                        class="input-text" 
+                                        type="text"
+                                        data-validate="{required:true, 'validate-alphanum-with-spaces':true}">
+                            </div>
+                        </div>
+
+                        <!-- Department -->
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->
+                                escapeHtmlAttr(__('Department')) ?></span></label>
+                            <div class="control">
+                                <input name="department" 
+                                        id="department" 
+                                        title="Department" 
+                                        value="" 
+                                        class="input-text" 
+                                        type="text"
+                                        data-validate="{required:true, 'validate-alphanum-with-spaces':true}">
+                            </div>
+                        </div>
+
+                        <!-- Occupation -->
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->
+                                escapeHtmlAttr(__('Occupation')) ?></span></label>
+                            <div class="control">
+                                <input name="occupation" 
+                                        id="occupation" 
+                                        title="Occupation" 
+                                        value="" 
+                                        class="input-text" 
+                                        type="text"
+                                        data-validate="{required:true, 'validate-alphanum-with-spaces':true}">
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->
+                                escapeHtmlAttr(__('Address')) ?></span></label>
+                            <div class="control">
+                                <textarea name="address" 
+                                            id="address" 
+                                            title="Address" 
+                                            value="" 
+                                            class="input-text" 
+                                            type="text"
+                                            data-validate="{required:true, 'validate-alphanum-with-spaces':true}"> </textarea>
+                            </div>
+                        </div>
+
+                        <!-- Joining date -->
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->
+                                escapeHtmlAttr(__('Joining Date')) ?></span></label>
+                            <div class="control">
+                                <input name="joining_date" 
+                                        id="joining_date" 
+                                        title="Joining Date" 
+                                        value="" 
+                                        class="input-text" 
+                                        type="date"
+                                        data-validate="{required:true}">
+                            </div>
+                        </div>
+
+                        <!-- Date of birth -->
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->
+                                escapeHtmlAttr(__('DOB')) ?></span></label>
+                            <div class="control">
+                                <input name="date_of_birth" 
+                                        id="date_of_birth" 
+                                        title="DOB" 
+                                        value="" 
+                                        class="input-text" 
+                                        type="date"
+                                       data-validate="{required:true}">
+                            </div>
+                        </div>
+
+                        <!-- Remember me -->
+                           
+                        <div class="field name required">
+                            <label class="label" for="title"><span><?= $block->
+                                escapeHtmlAttr(__('Rememeber Me')) ?></span></label>
+                            <div class="control">
+                                <input  type="checkbox"
+                                        name="Rememeber Me" 
+                                        id="Rememeber Me" 
+                                        title="Rememeber Me" 
+                                        value="" 
+                                        class="checkbox" 
+                                       data-validate="{required:true}">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </fieldset>
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <button type="submit" class="action submit primary" title="Save"><span><?= $block->
+                        escapeHtmlAttr(__('Save')) ?></span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

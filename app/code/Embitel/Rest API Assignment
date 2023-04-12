@@ -1,0 +1,189 @@
+namespace : Embitel
+Module name : Graphql
+
+
+REST API
+
+1.Create api to display the list of 3 users static data.
+
+Endpoint : /rest/V1/graphqlapi/name
+
+Method: GET
+
+Payload: None
+
+Response:
+[
+    {
+        "firstname": "Lavanya77",
+        "lastname": "Murugan",
+        "email": "lavanya@gmail.com",
+        "telephone": "1324263823",
+        "city": "Banglore",
+        "state": "Karnataka",
+        "country": "India"
+    },
+    {
+        "firstname": "Lavanya778",
+        "lastname": "Murugan",
+        "email": "lavanya@gmail.com",
+        "telephone": "1324263823",
+        "city": "Banglore",
+        "state": "Karnataka",
+        "country": "India"
+    },
+    {
+        "firstname": "Lavanya88",
+        "lastname": "Murugan",
+        "email": "lavanya@gmail.com",
+        "telephone": "1324263823",
+        "city": "Banglore",
+        "state": "Karnataka",
+        "country": "India"
+    }
+]
+
+
+
+2.Create rest api to create customer group
+
+Endpoint : /rest/V1/post/class
+
+Method: POST
+
+Payload:
+	{
+    "data": {
+        "customer_group_code":"Lava",
+        "tax_class_id": 3
+    	}
+	}
+	
+Response:
+	[
+    {
+        "customer_group_id": "0",
+        "customer_group_code": "NOT LOGGED IN",
+        "tax_class_id": "3"
+    },
+    {
+        "customer_group_id": "1",
+        "customer_group_code": "General",
+        "tax_class_id": "3"
+    },
+    {
+        "customer_group_id": "2",
+        "customer_group_code": "Wholesale",
+        "tax_class_id": "3"
+    },
+    {
+        "customer_group_id": "3",
+        "customer_group_code": "Retailer",
+        "tax_class_id": "3"
+    },
+    {
+        "customer_group_id": "4",
+        "customer_group_code": "Lava",
+        "tax_class_id": "3"
+    }
+]
+	
+GraphQl
+
+1.Create graphql query to display the list of 3 users static data.
+
+Endpoint: /graphql
+
+Method: Query
+
+Payloads:
+	{
+	customerDetails {
+	total_count
+	items {
+	firstname
+	lastname
+	email
+	telephone
+	city
+	state
+	country
+	}
+	}
+	}
+	
+Respose:
+{
+  "data": {
+    "customerDetails": {
+      "total_count": 3,
+      "items": [
+        {
+          "firstname": "Lavanya77",
+          "lastname": "Murugan",
+          "email": "lavanya@gmail.com",
+          "telephone": "1324263823",
+          "city": "Banglore",
+          "state": "Karnataka",
+          "country": "India"
+        },
+        {
+          "firstname": "Lavanya778",
+          "lastname": "Murugan",
+          "email": "lavanya@gmail.com",
+          "telephone": "1324263823",
+          "city": "Banglore",
+          "state": "Karnataka",
+          "country": "India"
+        },
+        {
+          "firstname": "Lavanya88",
+          "lastname": "Murugan",
+          "email": "lavanya@gmail.com",
+          "telephone": "1324263823",
+          "city": "Banglore",
+          "state": "Karnataka",
+          "country": "India"
+        }
+      ]
+    }
+  }
+}
+
+
+
+2.Create graphql mutation to create customer group
+
+Endpoint: /graphql
+
+Payload:
+
+mutation{
+  Groupdata(input:{
+    groupId: 3,
+    groupName: "lavaa"
+  }){
+    groupId
+    groupName
+  }
+  
+}
+Responce:
+{
+  "data": {
+    "Groupdata": {
+      "groupId": 3,
+      "groupName": "lavaa"
+    }
+  }
+}
+
+
+3.Cron - Embitel\Graphql\Cron\Testdetail
+
+4.Custom Script - Custom\CustomScript
+
+
+
+
+	

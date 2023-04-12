@@ -1,0 +1,36 @@
+type Query 
+    {
+        customerDetails:customerDetailsOutput @resolver(class:"Embitel\\Graphql\\Model\\Resolver\\Customer") 
+        @doc(description:"Customer Details")
+    }
+
+type customerDetailsOutput 
+    {
+        total_count:Int @doc(description:"Total No of Customers"),
+        items:[customerDetail] @doc(description:"Customer Information")
+    }
+
+type customerDetail 
+    {
+        firstname:String @doc(description: "Customer First Name"),
+        lastname:String @doc(description: "Customer Last Name"),
+        email:String @doc(description: "Customer Email"),
+        telephone:String @doc(description: "Customer Mobile Number"),
+        city:String @doc(description: "Customer City"),
+        state:String @doc(description: "Customer State"),
+        country:String @doc(description: "Customer Country")
+    }
+
+
+type Mutation {
+    Groupdata (input: datasInput! @doc(description:"Input for Customer Group")): GroupdataOutput
+    @resolver(class:"Embitel\\Graphql\\Model\\Resolver\\CustomerGroupData")
+}
+input datasInput {
+    groupId:Int! @doc(description:"Customer Tax Class ID")
+    groupName:String! @doc(description:"Customer Group Code")
+}
+type GroupdataOutput {
+    groupId:Int @doc(description:"Customer Group ID")
+    groupName:String @doc(description:"Customer Group Code")
+}
